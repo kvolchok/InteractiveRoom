@@ -681,7 +681,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 158196, guid: 91425614393ed2e4c88f15e6c0b8b375, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 416012, guid: 91425614393ed2e4c88f15e6c0b8b375, type: 3}
       propertyPath: m_RootOrder
@@ -3164,6 +3164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d660eff04e4ce3956965c2c71bff15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _throwPower: 0
   _highlightIntensity: 4
 --- !u!54 &308522341
 Rigidbody:
@@ -4879,15 +4880,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 120708, guid: e103469d8ea00fc4f91d69e2af3b25bd, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 143496, guid: e103469d8ea00fc4f91d69e2af3b25bd, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 178634, guid: e103469d8ea00fc4f91d69e2af3b25bd, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 452798, guid: e103469d8ea00fc4f91d69e2af3b25bd, type: 3}
       propertyPath: m_RootOrder
@@ -5083,7 +5084,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 151594, guid: b1be9ab4dc52dd44a8f311b237c90017, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 470168, guid: b1be9ab4dc52dd44a8f311b237c90017, type: 3}
       propertyPath: m_RootOrder
@@ -7304,7 +7305,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 712852286}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: InteractableInventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8894,6 +8895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d660eff04e4ce3956965c2c71bff15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _throwPower: 0
   _highlightIntensity: 4
 --- !u!54 &857700670
 Rigidbody:
@@ -9026,7 +9028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 125472, guid: 837a78335be42904f9b415b88559c571, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 497658, guid: 837a78335be42904f9b415b88559c571, type: 3}
       propertyPath: m_RootOrder
@@ -9317,6 +9319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d660eff04e4ce3956965c2c71bff15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _throwPower: 0
   _highlightIntensity: 4
 --- !u!54 &929960855
 Rigidbody:
@@ -9514,7 +9517,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 188320, guid: 24f5ed4d41e56be4492c9961cf726915, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 494334, guid: 24f5ed4d41e56be4492c9961cf726915, type: 3}
       propertyPath: m_RootOrder
@@ -9586,6 +9589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d660eff04e4ce3956965c2c71bff15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _throwPower: 0
   _highlightIntensity: 4
 --- !u!54 &938871894
 Rigidbody:
@@ -12364,7 +12368,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 149524, guid: 1d6e1301f3125274fae37eac3b95800a, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 461416, guid: 1d6e1301f3125274fae37eac3b95800a, type: 3}
       propertyPath: m_RootOrder
@@ -12451,6 +12455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d660eff04e4ce3956965c2c71bff15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _throwPower: 0
   _highlightIntensity: 4
 --- !u!54 &1229447172
 Rigidbody:
@@ -12500,7 +12505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 150822, guid: 344ba0258a4cb0246b023df1cc90ead8, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 456442, guid: 344ba0258a4cb0246b023df1cc90ead8, type: 3}
       propertyPath: m_RootOrder
@@ -13452,7 +13457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 179668, guid: 74b429c4d161ce24ca919b070ba84eda, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 422022, guid: 74b429c4d161ce24ca919b070ba84eda, type: 3}
       propertyPath: m_RootOrder
@@ -13544,6 +13549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d660eff04e4ce3956965c2c71bff15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _throwPower: 0
   _highlightIntensity: 4
 --- !u!54 &1375330517
 Rigidbody:
@@ -14065,6 +14071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d660eff04e4ce3956965c2c71bff15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _throwPower: 0
   _highlightIntensity: 4
 --- !u!54 &1425898266
 Rigidbody:
@@ -14586,6 +14593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d660eff04e4ce3956965c2c71bff15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _throwPower: 0
   _highlightIntensity: 4
 --- !u!54 &1474054859
 Rigidbody:
@@ -14975,6 +14983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d660eff04e4ce3956965c2c71bff15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _throwPower: 0
   _highlightIntensity: 4
 --- !u!54 &1507193383
 Rigidbody:
@@ -16588,7 +16597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 147744, guid: a1fa91c4522b0dd46bee47da22752eb0, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 456616, guid: a1fa91c4522b0dd46bee47da22752eb0, type: 3}
       propertyPath: m_RootOrder
@@ -16685,6 +16694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d660eff04e4ce3956965c2c71bff15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _throwPower: 0
   _highlightIntensity: 4
 --- !u!54 &1623846708
 Rigidbody:
@@ -19059,12 +19069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 263fc90d443184223be22ee2fa8701e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rayMaxDistance: 100
-  _layer:
-    serializedVersion: 2
-    m_Bits: 128
-  _inventoryHolder: {fileID: 504122879}
-  _interactableInventory: {fileID: 712852286}
+  _inventory: {fileID: 504122879}
 --- !u!1001 &1848767449
 PrefabInstance:
   m_ObjectHideFlags: 0

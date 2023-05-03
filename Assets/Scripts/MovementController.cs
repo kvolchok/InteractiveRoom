@@ -18,7 +18,7 @@ public class MovementController : MonoBehaviour
         var horizontalInput = Input.GetAxis("Horizontal");
     
         // Вычисляем вектор направления.
-        var inputDirection = new Vector3(horizontalInput, 0, verticalInput);
+        var inputDirection = new Vector3(horizontalInput, 0, verticalInput).normalized;
         // Конвертируем локальное направление персонажа вперед в мировое.
         var direction = transform.TransformDirection(inputDirection);
 

@@ -1,68 +1,65 @@
+using System;
 using UnityEngine;
 
 public class InteractionController : MonoBehaviour
 {
-    private const string DOOR_TAG = "Door";
-
     [SerializeField]
-    private float _rayMaxDistance = 100;
-    
-    [SerializeField]
-    private LayerMask _layer;
+    private Transform _inventory;
 
-    [SerializeField]
-    private Transform _inventoryHolder;
-
-    [SerializeField]
-    private Transform _interactableInventory;
-
-    private bool _isInventoryHolderFull;
+    private InteractableItem _lastInteractableItem;
+    private InteractableItem _lastPickedUpItem;
 
     private void Update()
     {
-        var ray = new Ray(transform.position, transform.forward);
-
-        if (Physics.Raycast(ray, out var hitInfo, _rayMaxDistance,_layer))
-        {
-            var gameObject = hitInfo.transform.gameObject;
-
-            var interactableObject = gameObject.GetComponent<InteractableItem>();
-            interactableObject.SetFocus();
-
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                if (_isInventoryHolderFull)
-                {
-                    var inventory = _inventoryHolder.GetComponentInChildren<Rigidbody>().gameObject;
-                    inventory.transform.SetParent(_interactableInventory, true);
-                    _isInventoryHolderFull = false;   
-                }
-
-                gameObject.transform.SetParent(_inventoryHolder, false);
-                _isInventoryHolderFull = true;
-            }
-
-            if (Input.GetMouseButtonDown(0) && _isInventoryHolderFull)
-            {
-                var inventory = _inventoryHolder.GetComponentInChildren<Rigidbody>();
-                inventory.AddForce(Vector3.forward, ForceMode.Force);
-            }
-        }
+        var interactableItem = RaycastOperations.GetSelectedObject<InteractableItem>();
         
-        CheckTheDoor(ray);
+        InteractWithItems(ref _lastInteractableItem, interactableItem,
+            () => interactableItem.SetFocus(), () => _lastInteractableItem.RemoveFocus());
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            TryOpenTheDoor();
+            
+            InteractWithItems(ref _lastPickedUpItem, interactableItem,
+                () => interactableItem.PickUp(_inventory), () => _lastPickedUpItem.Drop());
+        }
+
+        if (Input.GetMouseButtonDown(0) && _lastPickedUpItem != null)
+        {
+            ThrowItem();
+        }
     }
 
-    private void CheckTheDoor(Ray ray)
+    private void TryOpenTheDoor()
     {
-        if (Physics.Raycast(ray, out var hitInfo))
+        var door = RaycastOperations.GetSelectedObject<Door>();
+        if (door != null)
         {
-            var gameObject = hitInfo.transform.gameObject;
-            
-            if (gameObject.CompareTag(DOOR_TAG) && Input.GetKeyDown(KeyCode.E))
-            {
-                var door = gameObject.GetComponent<Door>();
-                door.SwitchDoorState();
-            }
+            door.SwitchDoorState();
         }
+    }
+
+    private void InteractWithItems(ref InteractableItem lastInteractableItem, InteractableItem interactableItem,
+        Action firstAction, Action secondAction)
+    {
+        if (lastInteractableItem == interactableItem) return;
+
+        if (lastInteractableItem != null)
+        {
+            secondAction();
+        }
+
+        if (interactableItem != null)
+        {
+            firstAction();
+        }
+
+        lastInteractableItem = interactableItem;
+    }
+
+    private void ThrowItem()
+    {
+        _lastPickedUpItem.Throw(transform.forward);
+        _lastPickedUpItem = null;
     }
 }
