@@ -13,14 +13,14 @@ public class InteractionController : MonoBehaviour
     {
         var interactableItem = RaycastOperations.GetSelectedObject<InteractableItem>();
         
-        InteractWithItems(ref _lastInteractableItem, interactableItem,
+        InteractWithItems(interactableItem, ref _lastInteractableItem,
             () => interactableItem.SetFocus(), () => _lastInteractableItem.RemoveFocus());
 
         if (Input.GetKeyDown(KeyCode.E))
         {
             TryOpenTheDoor();
             
-            InteractWithItems(ref _lastPickedUpItem, interactableItem,
+            InteractWithItems(interactableItem, ref _lastInteractableItem,
                 () => interactableItem.PickUp(_inventory), () => _lastPickedUpItem.Drop());
         }
 
@@ -39,10 +39,13 @@ public class InteractionController : MonoBehaviour
         }
     }
 
-    private void InteractWithItems(ref InteractableItem lastInteractableItem, InteractableItem interactableItem,
+    private void InteractWithItems(InteractableItem interactableItem, ref InteractableItem lastInteractableItem,
         Action firstAction, Action secondAction)
     {
-        if (lastInteractableItem == interactableItem) return;
+        if (lastInteractableItem == interactableItem)
+        {
+            return;
+        }
 
         if (lastInteractableItem != null)
         {
