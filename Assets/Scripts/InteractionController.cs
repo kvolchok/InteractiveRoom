@@ -20,7 +20,7 @@ public class InteractionController : MonoBehaviour
         {
             TryOpenTheDoor();
             
-            InteractWithItems(interactableItem, ref _lastInteractableItem,
+            InteractWithItems(interactableItem, ref _lastPickedUpItem,
                 () => interactableItem.PickUp(_inventory), () => _lastPickedUpItem.Drop());
         }
 
